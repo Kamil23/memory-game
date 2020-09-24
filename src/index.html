@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo game - Zagraj w grę</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="shortcut icon" href="./assets/dnl-favicon.png" type="image/x-icon">
+    
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="init-info">
+        <h1 class="title">Połącz dania w pary</h1>
+        <span class="subtitle">Wykręć najlepszy czas</span>
+        <div class="logo-wrapper">
+            <div class="logo-img"></div>
+            <div class="logo-title">Dieta na luzie</div>
+        </div>
+        <button id="startGameBtn" class="start-game main-btn">Rozpocznij grę</button>
+        <button id="showTable" class="table-btn">Tabela wyników</button>
+    </div>
+
+    <div class="timer no-display">
+        <h1 class="timer-title">Przygotuj się</h1>
+        <span id="timer" class="time"></span>
+    </div>
+
+    <div class="game-wrapper no-display">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+    <div class="form-wrapper no-display">
+        <form name="userDataForm">
+            <input type=text name="name">
+            <div id="nameErr" hidden></div> 
+
+            <input type=text name="email">
+            <div id="emailErr" hidden></div> 
+
+            <button type="submit">Wpisz czas na listę</button>
+        </form>
+    </div>
+</div>
+
+<script src="./components/app.js" type='module'></script>
+</body>
+</html>

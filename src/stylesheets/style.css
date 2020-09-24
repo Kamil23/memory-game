@@ -1,0 +1,369 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+/* Variables */
+/* Colors */
+/* Global styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Start styling */
+body {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background: linear-gradient(#5B182A, #AF2C4F);
+}
+body .wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+body .wrapper .no-display {
+  display: none !important;
+}
+body .wrapper .init-info {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .wrapper .init-info .title {
+  padding: 0 30px;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+}
+body .wrapper .init-info .subtitle {
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+body .wrapper .init-info .logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .wrapper .init-info .logo-wrapper .logo-img {
+  background: url(../assets/dnl-logo.png) no-repeat center;
+  width: 40vw;
+  min-height: 168px;
+  background-size: contain;
+  margin: 40px auto 0;
+}
+body .wrapper .init-info .logo-wrapper .logo-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+body .wrapper .init-info .main-btn {
+  margin-top: 35px;
+  padding: 0 20px;
+  width: 970w;
+  height: 80px;
+  background: #05A2B4;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+body .wrapper .init-info .table-btn {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  padding: 10px 20px;
+  background: #fff0;
+  border: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+}
+body .wrapper .timer {
+  margin: 20px;
+  position: relative;
+  width: 100%;
+}
+body .wrapper .timer .timer-title {
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+body .wrapper .timer .time {
+  position: absolute;
+  top: 100%;
+}
+body .wrapper .game-wrapper {
+  margin: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80vw;
+}
+body .wrapper .game-wrapper div {
+  margin: 4px;
+  border-radius: 6px;
+  flex-basis: 22%;
+  flex-grow: 1;
+  height: 15vh;
+}
+body .wrapper .game-wrapper div.sd34FdfD {
+  background: url("../assets/images/img-ekdjeu.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .wrapper .game-wrapper div.lkdjfd3e {
+  background: url("../assets/images/img-ewiudw.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .wrapper .game-wrapper div.r4dSdf8j {
+  background: url("../assets/images/img-hsgd786s.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .wrapper .game-wrapper div.Y6DSw3wq {
+  background: url("../assets/images/img-hsgeew.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .wrapper .game-wrapper div.o9slSee3 {
+  background: url("../assets/images/img-lksd8yd.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .wrapper .game-wrapper div.I4SeDE4E {
+  background: url("../assets/images/img-rrfrfr.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .wrapper .game-wrapper div.kjsdgf5t {
+  background: url("../assets/images/img-ytsdgs.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .wrapper .game-wrapper div.kjd44SWW {
+  background: url("../assets/images/img-yutshd.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .wrapper .game-wrapper div.off {
+  background: url(../assets/dnl-logo.png) no-repeat center;
+  background-size: 60px 60px;
+  background-color: rgba(210, 44, 88, 0.75);
+  filter: opacity(0.2) blur(1px);
+}
+body .wrapper .game-wrapper div.hidden {
+  background: url(../assets/dnl-logo.png) no-repeat center;
+  background-size: 60px 60px;
+  background-color: rgba(210, 44, 88, 0.75);
+  box-shadow: 0 1px 1px #ccc;
+}
+
+/* Summary page */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .timer .title {
+  font-size: 20px;
+  font-weight: 300;
+}
+.wrapper .timer .end-time {
+  font-size: 48px;
+  font-weight: 900;
+}
+.wrapper .play-again-btn {
+  margin-bottom: 20px;
+}
+.wrapper .form-wrapper {
+  margin-top: 20px;
+}
+.wrapper .form-wrapper .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .form-wrapper .form .success {
+  margin: 20px 0;
+  padding: 20px;
+  transition: 0.5s;
+  font-weight: 300;
+}
+.wrapper .form-wrapper .form .success {
+  background: #06b906;
+}
+.wrapper .form-wrapper .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.wrapper .form-wrapper .field label {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.wrapper .form-wrapper .field input {
+  margin-bottom: 5px;
+  padding: 0 10px;
+  width: 60vw;
+  height: 50px;
+  border: 1px solid #707070;
+  border-radius: 6px;
+  color: #1d1d1d;
+  font-size: 20px;
+}
+.wrapper .form-wrapper .field .error {
+  font-weight: 300;
+  color: #f00;
+  border-color: #f00;
+}
+.wrapper .form-wrapper .save-data-btn {
+  margin-top: 10px;
+  width: 60vw;
+  height: 57px;
+  background: #05A2B4;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.wrapper .form-wrapper .promo-info {
+  margin: 15px 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  width: 60vw;
+  text-align: center;
+}
+
+.nav-bottom-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+}
+.nav-bottom-btns .btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+}
+.nav-bottom-btns .show-table-btn {
+  border: 1px solid #fff;
+}
+
+/* Table page */
+.wrapper .header {
+  display: flex;
+  width: 100%;
+  padding: 0 20px;
+}
+.wrapper .header div {
+  margin: 4px;
+  flex: 1;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: none;
+  color: #fff;
+  font-weight: 300;
+}
+.wrapper .header .header-position {
+  flex: 0.2;
+}
+.wrapper .header .header-name, .wrapper .header .header-time {
+  justify-content: left;
+}
+.wrapper .table-wrapper {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow: auto;
+}
+.wrapper .table-wrapper .row {
+  display: flex;
+}
+.wrapper .table-wrapper .row div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 40px;
+  background: #fff;
+  color: #630a23;
+  margin: 1px;
+  padding: 5px;
+  font-size: 18px;
+}
+.wrapper .table-wrapper .row .person-pos {
+  flex: 0.2;
+}
+.wrapper .table-wrapper .row .person-name, .wrapper .table-wrapper .row .person-time {
+  justify-content: left;
+}
+
+/* Mobile */
+@media (orientation: portrait) {
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  body .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  body .wrapper .game-wrapper {
+    width: 90vw;
+    margin: 10vh 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .wrapper .game-wrapper .card {
+    background-size: contain;
+    flex-basis: 20%;
+    height: 12vh;
+  }
+}
+/* Mobile max-width 330px */
+@media (orientation: portrait) and (max-width: 330px) {
+  body .wrapper .init-info {
+    margin: 20px 0;
+  }
+  body .wrapper .init-info .logo-wrapper .logo-img {
+    margin: 0 auto;
+  }
+  body .wrapper .timer {
+    margin: 0;
+  }
+  body .wrapper .form-wrapper .promo-info {
+    display: none;
+  }
+  body .wrapper .form-wrapper .form .success {
+    margin: 5px 0;
+    padding: 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

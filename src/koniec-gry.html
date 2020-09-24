@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wynik gry</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="shortcut icon" href="./assets/dnl-favicon.png" type="image/x-icon">
+    
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="init-info">
+        <h1 class="title">Gratulacje!</h1>
+    </div>
+
+    <div class="timer">
+        <h1 class="title">Czas Twojej gry:</h1>
+        <span id="timer" class="end-time"></span>
+    </div>
+    <!-- <div class="play-again-btn">Zagraj ponownie</div>rererrerer -->
+
+
+    <div class="form-wrapper">
+        <form class="form" name="userDataForm">
+            <div class="field">
+                <label for="name">Imię</label>
+                <input type=text name="name">
+                <div class="error" id="nameErr" hidden></div> 
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type=text name="email">
+                <div class="error" id="emailErr" hidden></div> 
+            </div>
+            <button class="save-data-btn" type="submit">Zapisz</button>
+            <div id="containerInfo"></div>
+            <span class="promo-info">Wpisz swój wynik i sprawdź swoją obecną pozycję!</span>
+        </form>
+    </div>
+    <div class="nav-bottom-btns">
+        <button class="return-btn btn" id="returnBtn">Powrót</button>
+        <button class="show-table-btn btn" id="showTable">Zobacz tabelę</button>
+    </div>
+</div>
+
+<script src="./components/summary.js" type='module'></script>
+</body>
+</html>
