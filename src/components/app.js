@@ -1,6 +1,6 @@
 import { cardColors } from '../utils/cardColors.js';
 import { startTimer, stopTimer, getTime } from '../utils/timer.js';
-import { countDown } from '../utils/utils.js';
+import { countDown, redirectToMainPage, reload } from '../utils/utils.js';
 
 /* Game */
 
@@ -87,10 +87,16 @@ let gameWrapper = document.querySelector(".game-wrapper");
 let initInfo = document.querySelector(".init-info");
 let timer = document.querySelector(".timer");
 
-const showTableButton = document.querySelector("#showTable");
-showTableButton.addEventListener("click", () => { window.location.href = "./tabela.html" });
-
 const startBtn = document.querySelector("#startGameBtn");
 startBtn.addEventListener("click", init);
 
+const logoWrapper = document.querySelector("#logoWrapper");
+logoWrapper.addEventListener("click", redirectToMainPage);
 
+/* Navigation */
+
+const homeBtn = document.querySelector("#home");
+homeBtn.addEventListener("click", reload);
+
+const showTableButton = document.querySelector("#showTable");
+showTableButton.addEventListener("click", () => { window.location.href = "./tabela.html" });

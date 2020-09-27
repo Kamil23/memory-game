@@ -2,6 +2,14 @@ const goBack = () => {
     window.location.href('./src');
 }
 
+const redirectToMainPage = () => {
+    window.open('https://dietanaluzie.pl', '_blank');
+}
+
+const reload = () => {
+    location.reload();
+}
+
 const formatTime = (time) => {
     const parseTime = parseInt(time)
     time = new Date(parseTime);
@@ -64,6 +72,16 @@ const countDown = (milliseconds) => {
 
 }
 
+// const addResetBtn = (selector, again) => {
+//     const resetSelector = document.getElementById(selector);
+//     const resetIcon = document.createElement("i");
+//     resetSelector.appendChild(resetIcon);
+//     resetIcon.classList.add('fas');
+//     resetIcon.classList.add('fa-redo');
+
+//     resetSelector.addEventListener('click', again);
+// }
 
 
-export { goBack, formatTime, getTimeFromStorage, countDown }
+
+export { goBack, formatTime, getTimeFromStorage, countDown, redirectToMainPage, reload }

@@ -43,14 +43,39 @@ body {
   color: $color-1;
   background: $bgGradientOne;
   .wrapper {
+    margin-bottom: 68px;
     display: flex;
     flex-direction: column;
     width: 50%;
     .no-display {
       display: none !important;
     }
+    .bottom-nav {
+      width: 100%;
+      background-color: #fff;
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      .container {
+        flex-basis: 33%;
+        justify-content: center;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        font-size: 28px;
+        color: #1d1d1d;
+      }
+    }
+    .sm-wrapper {
+      margin-top: 20px;
+      .link {
+        padding: 10px 15px;
+        color: #fff;
+        font-size: 22px;
+      }
+    }
     .init-info {
-      margin: 40px 0;
+      margin: 20px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -88,11 +113,9 @@ body {
       .main-btn {
         margin-top: 35px;
         padding: 0 20px;
-        width: 970w;
         height: 80px;
         background: $btnBackground;
         border: none;
-        border-radius: 6px;
         color: $color-1;
         font-size: 24px;
         font-weight: $font-bold;
@@ -270,22 +293,22 @@ body {
       font-weight: $font-bold;
       text-transform: uppercase;
     }
-    .promo-info {
-      margin: 15px 0;
-      font-weight: $font-light;
-      font-size: 16px;
-      line-height: 20px;
-      width: 60vw;
-      text-align: center;
-    }
+    // .promo-info {
+    //   margin: 15px 0;
+    //   font-weight: $font-light;
+    //   font-size: 16px;
+    //   line-height: 20px;
+    //   width: 60vw;
+    //   text-align: center;
+    // }
   }
 }
 .nav-bottom-btns {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  bottom: 0;
+  // position: fixed;
+  // bottom: 0;
   .btn {
     padding: 10px 20px;
     background: none;
@@ -323,11 +346,10 @@ body {
   }
   .table-wrapper {
     width: 100%;
+    margin-bottom: 20px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    height: 75vh;
-    overflow: auto;
     .row {
       display: flex;
       div {
@@ -397,10 +419,12 @@ body {
     .timer {
       margin: 0;
     }
+    .table-wrapper {
+    }
     .form-wrapper {
-      .promo-info {
-        display: none;
-      }
+      // .promo-info {
+      //   display: none;
+      // }
       .form {
         .success {
         margin: 5px 0;

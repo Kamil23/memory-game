@@ -6,11 +6,20 @@
     <title>Wynik gry</title>
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="shortcut icon" href="./assets/dnl-favicon.png" type="image/x-icon">
-    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
 
 <div class="wrapper">
+    <div class="bottom-nav">
+        <div id="home" class="container"><i class="fas fa-home"></i></div>
+        <div id="resetBtn" class="container"></div>
+        <div id="showTable" class="container"><i class="fas fa-table"></i></div>
+    </div>
+    <div class="sm-wrapper">
+        <a class="link" href="https://facebook.com/dietanaluzie"><i class="fab fa-facebook"></i></a>
+        <a class="link" href="https://instagram.com/dietanaluziepl"><i class="fab fa-instagram"></i></a>
+    </div>
     <div class="init-info">
         <h1 class="title">Gratulacje!</h1>
     </div>
@@ -19,7 +28,6 @@
         <h1 class="title">Czas Twojej gry:</h1>
         <span id="timer" class="end-time"></span>
     </div>
-    <!-- <div class="play-again-btn">Zagraj ponownie</div>rererrerer -->
 
 
     <div class="form-wrapper">
@@ -36,12 +44,7 @@
             </div>
             <button class="save-data-btn" type="submit">Zapisz</button>
             <div id="containerInfo"></div>
-            <span class="promo-info">Wpisz swój wynik i sprawdź swoją obecną pozycję!</span>
         </form>
-    </div>
-    <div class="nav-bottom-btns">
-        <button class="return-btn btn" id="returnBtn">Powrót</button>
-        <button class="show-table-btn btn" id="showTable">Zobacz tabelę</button>
     </div>
 </div>
 

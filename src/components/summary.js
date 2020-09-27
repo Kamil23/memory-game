@@ -1,5 +1,5 @@
 import { validateForm as validate, printSuccess, printError } from '../utils/validation.js';
-import { formatTime, getTimeFromStorage } from '../utils/utils.js';
+import { formatTime, getTimeFromStorage, reload } from '../utils/utils.js';
 
 const init = () => {
     const timerSelector = document.querySelector("#timer");
@@ -48,11 +48,16 @@ const prepareData = () => {
 const form = document.querySelector('[name=userDataForm]');
 form.addEventListener("submit", registerData);
 
+/* Navigation */
+
+const homeBtn = document.querySelector("#home");
+homeBtn.addEventListener("click", () => { window.location.href = "./" });
+
 const showTableButton = document.querySelector("#showTable");
 showTableButton.addEventListener("click", () => { window.location.href = "./tabela.html" });
 
-const backButton = document.querySelector("#returnBtn");
-backButton.addEventListener("click", () => { window.location.href = "./"});
+const containerInfo = document.querySelector("#containerInfo");
+containerInfo.addEventListener("click", () => { window.location.href = "./tabela.html" });
 
 init();
 

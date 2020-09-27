@@ -20,6 +20,7 @@ body {
   background: linear-gradient(#5B182A, #AF2C4F);
 }
 body .wrapper {
+  margin-bottom: 68px;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -27,8 +28,32 @@ body .wrapper {
 body .wrapper .no-display {
   display: none !important;
 }
+body .wrapper .bottom-nav {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+body .wrapper .bottom-nav .container {
+  flex-basis: 33%;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  font-size: 28px;
+  color: #1d1d1d;
+}
+body .wrapper .sm-wrapper {
+  margin-top: 20px;
+}
+body .wrapper .sm-wrapper .link {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 22px;
+}
 body .wrapper .init-info {
-  margin: 40px 0;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,11 +92,9 @@ body .wrapper .init-info .logo-wrapper .logo-title {
 body .wrapper .init-info .main-btn {
   margin-top: 35px;
   padding: 0 20px;
-  width: 970w;
   height: 80px;
   background: #05A2B4;
   border: none;
-  border-radius: 6px;
   color: #fff;
   font-size: 24px;
   font-weight: 700;
@@ -245,21 +268,11 @@ body .wrapper .game-wrapper div.hidden {
   font-weight: 700;
   text-transform: uppercase;
 }
-.wrapper .form-wrapper .promo-info {
-  margin: 15px 0;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 20px;
-  width: 60vw;
-  text-align: center;
-}
 
 .nav-bottom-btns {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  bottom: 0;
 }
 .nav-bottom-btns .btn {
   padding: 10px 20px;
@@ -296,11 +309,10 @@ body .wrapper .game-wrapper div.hidden {
 }
 .wrapper .table-wrapper {
   width: 100%;
+  margin-bottom: 20px;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  height: 75vh;
-  overflow: auto;
 }
 .wrapper .table-wrapper .row {
   display: flex;
@@ -356,9 +368,6 @@ body .wrapper .game-wrapper div.hidden {
   }
   body .wrapper .timer {
     margin: 0;
-  }
-  body .wrapper .form-wrapper .promo-info {
-    display: none;
   }
   body .wrapper .form-wrapper .form .success {
     margin: 5px 0;
