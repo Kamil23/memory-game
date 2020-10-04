@@ -1,4 +1,4 @@
-/* Form validation */
+/* PrintError handling */
 
 const printError = (elemId, msg) => {
     const element = document.getElementById(elemId);
@@ -13,6 +13,8 @@ const printSuccess = (elemId, msg) => {
     element.innerHTML = msg;
     element.removeAttribute("hidden");
 }
+
+/* Form validation */
 
 const validateForm = () => {
     const name = document.userDataForm.name.value;
@@ -50,10 +52,12 @@ const validateForm = () => {
     }
 }
 
+/* Encryption game time */
+
 const encryptData = (time) => {
-    time = time.toString();
     let hash = CryptoJS.MD5(time);
     hash = hash.toString(CryptoJS.enc.Base64);
+    time = time.toString();
     let encryptedTime = CryptoJS.AES.encrypt(time, hash).toString();
     window.localStorage.setItem('key', hash);
     return encryptedTime;

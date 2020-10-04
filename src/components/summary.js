@@ -25,7 +25,7 @@ const registerData = (e) => {
         .then(response => {
             if (response.status == 'success') {
                 printSuccess('containerInfo', 'Udało się! Sprawdź swoją pozycję');
-            } else if (response.status == "failed") {
+            } else if (response.status == "fail") {
                 printError('containerInfo', 'Coś poszło nie tak. Spróbuj ponownie za chwilę lub skontaktuj się z nami');
             }
         })
@@ -37,7 +37,10 @@ const prepareData = () => {
     let formData = new FormData();
     const name = document.userDataForm.name.value;
     const email = document.userDataForm.email.value;
-    const time = parseInt(window.localStorage.getItem('default'));
+
+    const encryptedTime = getTimeFromStorage('default');
+    const key = getTimeFromStorage('key');
+    const time = decryptData(encryptedTime, key);
     if (!time) {
         return;
     }
@@ -66,8 +69,3 @@ const containerInfo = document.querySelector("#containerInfo");
 containerInfo.addEventListener("click", () => { window.location.href = "./tabela.html" });
 
 init();
-
-
-
-
-

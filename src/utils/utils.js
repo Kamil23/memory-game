@@ -72,16 +72,4 @@ const countDown = (milliseconds) => {
 
 }
 
-// const addResetBtn = (selector, again) => {
-//     const resetSelector = document.getElementById(selector);
-//     const resetIcon = document.createElement("i");
-//     resetSelector.appendChild(resetIcon);
-//     resetIcon.classList.add('fas');
-//     resetIcon.classList.add('fa-redo');
-
-//     resetSelector.addEventListener('click', again);
-// }
-
-
-
 export { goBack, formatTime, getTimeFromStorage, countDown, redirectToMainPage, reload }

@@ -12,26 +12,31 @@ let gameTime = '';
 let activeCard = '';
 const activeCards = [];
 const millisecondsToCountDown = 3000;
+const delayBeforeStart = 2000;
 
 const gamePairs = cards.length/2;
 let gameResult = 0;
 
-const assignCards = () => {
-    cards.forEach(item => {
-        const position = Math.floor(Math.random()*cardColors.length);
-        item.classList.add(cardColors[position]);
-        cardColors.splice(position, 1);
-    })
-}
-
-const init = () => {
+const startGame = () => {
     window.localStorage.clear();
     gameWrapper.classList.remove("no-display");
     initInfo.classList.add("no-display");
     timer.classList.remove("no-display");
 
-    countDown(millisecondsToCountDown);
+    cards.forEach(item => {
+        const position = Math.floor(Math.random() * cardColors.length);
+        item.classList.add(cardColors[position]);
+        cardColors.splice(position, 1);
+    })
 
+    setTimeout(() => {
+        countDown(millisecondsToCountDown);
+        cards.forEach(item =>{
+            item.classList.remove("hidden");
+        });
+    }, delayBeforeStart);
+
+    
     setTimeout(() => {
         cards.forEach(item =>{
             item.classList.add("hidden");
@@ -40,7 +45,7 @@ const init = () => {
         document.querySelector(".timer-title").innerHTML = "START!";
         startTimer();
         
-    }, millisecondsToCountDown)
+    }, millisecondsToCountDown + delayBeforeStart)
 }
 
 const clickCard = function() {
@@ -89,10 +94,7 @@ let initInfo = document.querySelector(".init-info");
 let timer = document.querySelector(".timer");
 
 const startBtn = document.querySelector("#startGameBtn");
-startBtn.addEventListener("click", async () => {
-    assignCards();
-    init();
-});
+startBtn.addEventListener("click", startGame);
 
 const logoWrapper = document.querySelector("#logoWrapper");
 logoWrapper.addEventListener("click", redirectToMainPage);

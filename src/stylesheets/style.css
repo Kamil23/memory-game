@@ -33,7 +33,7 @@ body .wrapper .bottom-nav {
   background-color: #23345c;
   display: flex;
   position: fixed;
-  bottom: 0;
+  bottom: -1px;
   border-top: 1px solid #fff;
 }
 body .wrapper .bottom-nav .container {
@@ -224,14 +224,17 @@ body .wrapper .game-wrapper div.hidden {
   flex-direction: column;
   align-items: center;
 }
-.wrapper .form-wrapper .form .success {
+.wrapper .form-wrapper .form > .success, .wrapper .form-wrapper .form > .error {
   margin: 20px 0;
   padding: 20px;
   transition: 0.5s;
   font-weight: 300;
 }
-.wrapper .form-wrapper .form .success {
+.wrapper .form-wrapper .form > .success {
   background: #06b906;
+}
+.wrapper .form-wrapper .form > .error {
+  background: #e72c2c;
 }
 .wrapper .form-wrapper .field {
   display: flex;
@@ -255,8 +258,8 @@ body .wrapper .game-wrapper div.hidden {
 }
 .wrapper .form-wrapper .field .error {
   font-weight: 300;
-  color: #f00;
-  border-color: #f00;
+  color: #e72c2c;
+  border-color: #e72c2c;
 }
 .wrapper .form-wrapper .save-data-btn {
   margin-top: 10px;
@@ -319,6 +322,25 @@ body .wrapper .game-wrapper div.hidden {
 .wrapper .table-wrapper .row {
   display: flex;
 }
+.wrapper .table-wrapper .row:nth-of-type(4) div, .wrapper .table-wrapper .row:nth-of-type(5) div, .wrapper .table-wrapper .row:nth-of-type(6) div, .wrapper .table-wrapper .row:nth-of-type(7) div, .wrapper .table-wrapper .row:nth-of-type(8) div, .wrapper .table-wrapper .row:nth-of-type(9) div, .wrapper .table-wrapper .row:nth-of-type(10) div {
+  background: #ffeeda;
+}
+.wrapper .table-wrapper .row:nth-of-type(1) div {
+  font-weight: 700;
+  background: #ff7e7e;
+}
+.wrapper .table-wrapper .row:nth-of-type(2) div {
+  background: #fcaaaa;
+}
+.wrapper .table-wrapper .row:nth-of-type(3) {
+  margin-bottom: 5px;
+}
+.wrapper .table-wrapper .row:nth-of-type(3) div {
+  background: #ffc7c7;
+}
+.wrapper .table-wrapper .row:nth-of-type(10) {
+  margin-bottom: 10px;
+}
 .wrapper .table-wrapper .row div {
   display: flex;
   justify-content: center;
@@ -326,10 +348,11 @@ body .wrapper .game-wrapper div.hidden {
   flex: 1;
   height: 40px;
   background: #fff;
-  color: #630a23;
+  color: #343434;
   margin: 1px;
   padding: 5px;
   font-size: 18px;
+  border-radius: 1px;
 }
 .wrapper .table-wrapper .row .person-pos {
   flex: 0.2;
@@ -358,6 +381,7 @@ body .wrapper .game-wrapper div.hidden {
     background-size: contain;
     flex-basis: 20%;
     height: 12vh;
+    transition: all 0.2s;
   }
 }
 /* Mobile max-width 330px */

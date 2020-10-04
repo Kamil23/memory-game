@@ -1,19 +1,14 @@
-import { formatTime, reload } from '../utils/utils.js';
+import { formatTime } from '../utils/utils.js';
 
 const init = () => {
-    downloadData()
+    downloadData();
 }
 
-
-const downloadData = () => {
-    fetch('https://api.cieplicki.dev/api', {
-            method: "GET",
-        })
-        .then(response => response.json())
-        .then(response => {
-            const array = Object.values(response.data)
-            renderData(array);
-        })
+const downloadData = async () => {
+    const fetchData = await fetch('https://api.cieplicki.dev/api', {method: "GET"});
+    const response = await fetchData.json();
+    const users = Object.values(response.data);
+    renderData(users);
 }
 
 const renderData = (data) => {
@@ -21,7 +16,7 @@ const renderData = (data) => {
     data.sort((a, b) => { return a.gameTime - b.gameTime });
 
     let container = document.querySelector(".table-wrapper");
-    let position = 0
+    let position = 0;
 
     data.map(({ name, gameTime }) => {
 
@@ -53,8 +48,3 @@ const homeBtn = document.querySelector("#home");
 homeBtn.addEventListener("click", () => { window.location.href = "./"});
 
 init();
-
-
-
-
-
