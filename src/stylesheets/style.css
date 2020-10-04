@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
   color: #fff;
-  background: linear-gradient(#5B182A, #AF2C4F);
+  background: #23345c;
 }
 body .wrapper {
   margin-bottom: 68px;
@@ -30,19 +30,20 @@ body .wrapper .no-display {
 }
 body .wrapper .bottom-nav {
   width: 100%;
-  background-color: #fff;
+  background-color: #23345c;
   display: flex;
   position: fixed;
   bottom: 0;
+  border-top: 1px solid #fff;
 }
 body .wrapper .bottom-nav .container {
   flex-basis: 33%;
   justify-content: center;
   display: flex;
-  padding: 10px;
+  padding: 18px;
   align-items: center;
-  font-size: 28px;
-  color: #1d1d1d;
+  font-size: 24px;
+  color: #fff;
 }
 body .wrapper .sm-wrapper {
   margin-top: 20px;
@@ -86,14 +87,15 @@ body .wrapper .init-info .logo-wrapper .logo-img {
   margin: 40px auto 0;
 }
 body .wrapper .init-info .logo-wrapper .logo-title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 body .wrapper .init-info .main-btn {
   margin-top: 35px;
   padding: 0 20px;
   height: 80px;
-  background: #05A2B4;
+  background: #de9d13;
   border: none;
   color: #fff;
   font-size: 24px;
@@ -139,42 +141,42 @@ body .wrapper .game-wrapper div {
   height: 15vh;
 }
 body .wrapper .game-wrapper div.sd34FdfD {
-  background: url("../assets/images/img-ekdjeu.jpg") no-repeat;
+  background: url("../assets/images/img-ekdjeu.webp") no-repeat;
   background-size: cover;
   background-position: center;
 }
 body .wrapper .game-wrapper div.lkdjfd3e {
-  background: url("../assets/images/img-ewiudw.jpg") no-repeat;
+  background: url("../assets/images/img-ewiudw.webp") no-repeat;
   background-size: cover;
   background-position: center;
 }
 body .wrapper .game-wrapper div.r4dSdf8j {
-  background: url("../assets/images/img-hsgd786s.jpg") no-repeat;
+  background: url("../assets/images/img-hsgd786s.webp") no-repeat;
   background-size: cover;
   background-position: center;
 }
 body .wrapper .game-wrapper div.Y6DSw3wq {
-  background: url("../assets/images/img-hsgeew.jpg") no-repeat;
+  background: url("../assets/images/img-hsgeew.webp") no-repeat;
   background-size: cover;
   background-position: center;
 }
 body .wrapper .game-wrapper div.o9slSee3 {
-  background: url("../assets/images/img-lksd8yd.jpg") no-repeat;
+  background: url("../assets/images/img-lksd8yd.webp") no-repeat;
   background-size: cover;
   background-position: center;
 }
 body .wrapper .game-wrapper div.I4SeDE4E {
-  background: url("../assets/images/img-rrfrfr.jpg") no-repeat;
+  background: url("../assets/images/img-rrfrfr.webp") no-repeat;
   background-size: cover;
   background-position: center;
 }
 body .wrapper .game-wrapper div.kjsdgf5t {
-  background: url("../assets/images/img-ytsdgs.jpg") no-repeat;
+  background: url("../assets/images/img-ytsdgs.webp") no-repeat;
   background-size: cover;
   background-position: center;
 }
 body .wrapper .game-wrapper div.kjd44SWW {
-  background: url("../assets/images/img-yutshd.jpg") no-repeat;
+  background: url("../assets/images/img-yutshd.webp") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -260,7 +262,7 @@ body .wrapper .game-wrapper div.hidden {
   margin-top: 10px;
   width: 60vw;
   height: 57px;
-  background: #05A2B4;
+  background: #de9d13;
   border: none;
   border-radius: 6px;
   color: #fff;

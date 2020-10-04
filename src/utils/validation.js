@@ -50,4 +50,19 @@ const validateForm = () => {
     }
 }
 
-export { validateForm, printSuccess, printError }
+const encryptData = (time) => {
+    time = time.toString();
+    let hash = CryptoJS.MD5(time);
+    hash = hash.toString(CryptoJS.enc.Base64);
+    let encryptedTime = CryptoJS.AES.encrypt(time, hash).toString();
+    window.localStorage.setItem('key', hash);
+    return encryptedTime;
+}
+
+const decryptData = (encryptedTime, key) => {
+    const decryptedTime = CryptoJS.AES.decrypt(encryptedTime, key);
+    const time = decryptedTime.toString(CryptoJS.enc.Utf8);
+    return time;
+}
+
+export { validateForm, printSuccess, printError, encryptData, decryptData }

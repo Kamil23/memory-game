@@ -14,8 +14,9 @@ $color-2: #dedede;
 $color-3: #404040;
 $color-4: #1d1d1d;
 $color-5: #630a23;
+$color-6: #23345c;
 
-$btnBackground: #05A2B4;
+$btnBackground: #de9d13;
 $borderInputColor: #707070;
 $errorColor: #f00; 
 
@@ -41,7 +42,7 @@ body {
   min-height: 100vh;
   font-family: $font-family;
   color: $color-1;
-  background: $bgGradientOne;
+  background: $color-6;
   .wrapper {
     margin-bottom: 68px;
     display: flex;
@@ -52,18 +53,19 @@ body {
     }
     .bottom-nav {
       width: 100%;
-      background-color: #fff;
+      background-color: $color-6;
       display: flex;
       position: fixed;
       bottom: 0;
+      border-top: 1px solid $color-1;
       .container {
         flex-basis: 33%;
         justify-content: center;
         display: flex;
-        padding: 10px;
+        padding: 18px;
         align-items: center;
-        font-size: 28px;
-        color: #1d1d1d;
+        font-size: 24px;
+        color: $color-1;
       }
     }
     .sm-wrapper {
@@ -106,8 +108,9 @@ body {
           margin: 40px auto 0;
         }
         .logo-title {
-          font-size: 32px;
+          font-size: 24px;
           font-weight: $font-bold;
+          letter-spacing: 0.5px;
         }
       }
       .main-btn {
@@ -161,42 +164,42 @@ body {
         height: 15vh;
 
         &.sd34FdfD {
-          background: url('../assets/images/img-ekdjeu.jpg') no-repeat;
+          background: url('../assets/images/img-ekdjeu.webp') no-repeat;
           background-size: cover;
           background-position: center;
         }
         &.lkdjfd3e {
-          background: url('../assets/images/img-ewiudw.jpg') no-repeat;
+          background: url('../assets/images/img-ewiudw.webp') no-repeat;
           background-size: cover;
           background-position: center;
         }
         &.r4dSdf8j {
-          background: url('../assets/images/img-hsgd786s.jpg') no-repeat;
+          background: url('../assets/images/img-hsgd786s.webp') no-repeat;
           background-size: cover;
           background-position: center;
         }
         &.Y6DSw3wq {
-          background: url('../assets/images/img-hsgeew.jpg') no-repeat;
+          background: url('../assets/images/img-hsgeew.webp') no-repeat;
           background-size: cover;
           background-position: center;
         }
         &.o9slSee3 {
-          background: url('../assets/images/img-lksd8yd.jpg') no-repeat;
+          background: url('../assets/images/img-lksd8yd.webp') no-repeat;
           background-size: cover;
           background-position: center;
         }
         &.I4SeDE4E {
-          background: url('../assets/images/img-rrfrfr.jpg') no-repeat;
+          background: url('../assets/images/img-rrfrfr.webp') no-repeat;
           background-size: cover;
           background-position: center;
         }
         &.kjsdgf5t {
-          background: url('../assets/images/img-ytsdgs.jpg') no-repeat;
+          background: url('../assets/images/img-ytsdgs.webp') no-repeat;
           background-size: cover;
           background-position: center;
         }
         &.kjd44SWW {
-          background: url('../assets/images/img-yutshd.jpg') no-repeat;
+          background: url('../assets/images/img-yutshd.webp') no-repeat;
           background-size: cover;
           background-position: center;
         }

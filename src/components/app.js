@@ -1,6 +1,7 @@
 import { cardColors } from '../utils/cardColors.js';
 import { startTimer, stopTimer, getTime } from '../utils/timer.js';
 import { countDown, redirectToMainPage, reload } from '../utils/utils.js';
+import { encryptData } from '../utils/validation.js';
 
 /* Game */
 
@@ -10,23 +11,24 @@ cards = [...cards];
 let gameTime = '';
 let activeCard = '';
 const activeCards = [];
-const millisecondsToCountDown = 5000;
+const millisecondsToCountDown = 3000;
 
 const gamePairs = cards.length/2;
 let gameResult = 0;
 
+const assignCards = () => {
+    cards.forEach(item => {
+        const position = Math.floor(Math.random()*cardColors.length);
+        item.classList.add(cardColors[position]);
+        cardColors.splice(position, 1);
+    })
+}
 
 const init = () => {
     window.localStorage.clear();
     gameWrapper.classList.remove("no-display");
     initInfo.classList.add("no-display");
     timer.classList.remove("no-display");
-
-    cards.forEach(item => {
-        const position = Math.floor(Math.random()*cardColors.length);
-        item.classList.add(cardColors[position]);
-        cardColors.splice(position, 1);
-    })
 
     countDown(millisecondsToCountDown);
 
@@ -58,18 +60,17 @@ const clickCard = function() {
 
         setTimeout(() => {
             if (activeCards[0].className === activeCards[1].className) {
-                console.log('wygrana');
                 activeCards.forEach(activeCard => activeCard.classList.add('off'));
                 gameResult++;
                 cards = cards.filter(item => !item.classList.contains("off"));
                 if (gameResult == gamePairs) {
                     stopTimer();
                     gameTime = getTime();
-                    window.localStorage.setItem('default', gameTime);
+                    const encryptedTime = encryptData(gameTime);
+                    window.localStorage.setItem('default', encryptedTime);
                     window.location.replace('koniec-gry.html');
                 }
             } else {
-                console.log("przegrana");
                 activeCards.forEach(activeCard => activeCard.classList.add('hidden'));
             }
 
@@ -88,7 +89,10 @@ let initInfo = document.querySelector(".init-info");
 let timer = document.querySelector(".timer");
 
 const startBtn = document.querySelector("#startGameBtn");
-startBtn.addEventListener("click", init);
+startBtn.addEventListener("click", async () => {
+    assignCards();
+    init();
+});
 
 const logoWrapper = document.querySelector("#logoWrapper");
 logoWrapper.addEventListener("click", redirectToMainPage);

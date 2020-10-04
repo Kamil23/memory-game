@@ -1,4 +1,4 @@
-import { formatTime } from '../utils/utils.js';
+import { formatTime, reload } from '../utils/utils.js';
 
 const init = () => {
     downloadData()
@@ -48,6 +48,9 @@ const renderData = (data) => {
 
 const backButton = document.querySelector("#returnBtn");
 backButton.addEventListener("click", () => { window.location.href = "./"});
+
+const homeBtn = document.querySelector("#home");
+homeBtn.addEventListener("click", () => { window.location.href = "./"});
 
 init();
 

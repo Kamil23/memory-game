@@ -1,10 +1,16 @@
-import { validateForm as validate, printSuccess, printError } from '../utils/validation.js';
-import { formatTime, getTimeFromStorage, reload } from '../utils/utils.js';
+import { validateForm as validate, printSuccess, printError, decryptData } from '../utils/validation.js';
+import { formatTime, getTimeFromStorage } from '../utils/utils.js';
 
 const init = () => {
     const timerSelector = document.querySelector("#timer");
-    const time = getTimeFromStorage();
-    timerSelector.innerHTML = formatTime(time);
+    const encryptedTime = getTimeFromStorage('default');
+    if (encryptedTime) {
+        const key = getTimeFromStorage('key');
+        const time = decryptData(encryptedTime, key);
+        timerSelector.innerHTML = formatTime(time);
+    } else {
+        window.location.replace('/');
+    }
 }
 
 const registerData = (e) => {

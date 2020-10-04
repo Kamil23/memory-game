@@ -28,8 +28,8 @@ const formatTime = (time) => {
     return `${minutes}:${seconds}:${hundredths}`;
 }
 
-const getTimeFromStorage = () => {
-    return window.localStorage.getItem("default");
+const getTimeFromStorage = (key) => {
+    return window.localStorage.getItem(key);
 }
 
 const variantOfSecond = (distanceInSeconds) => {
