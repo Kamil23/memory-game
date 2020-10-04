@@ -55,10 +55,10 @@ const validateForm = () => {
 /* Encryption game time */
 
 const encryptData = (time) => {
-    let hash = CryptoJS.MD5(time);
+    const timeString = time.toString();
+    let hash = CryptoJS.MD5(timeString);
     hash = hash.toString(CryptoJS.enc.Base64);
-    time = time.toString();
-    let encryptedTime = CryptoJS.AES.encrypt(time, hash).toString();
+    const encryptedTime = CryptoJS.AES.encrypt(timeString, hash).toString();
     window.localStorage.setItem('key', hash);
     return encryptedTime;
 }
