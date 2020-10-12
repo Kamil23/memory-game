@@ -260,6 +260,16 @@ body {
       > .error {
         background: $errorColor;
       }
+      .regulation-description {
+        width: 60vw;
+        padding: 10px 0;
+        font-size: 12px;
+        font-weight: $font-light;
+        color: $color-2;
+        a {
+          color: $color-1;
+        }
+      }
     }
     .field {
       display: flex;

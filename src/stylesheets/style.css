@@ -236,6 +236,16 @@ body .wrapper .game-wrapper div.hidden {
 .wrapper .form-wrapper .form > .error {
   background: #e72c2c;
 }
+.wrapper .form-wrapper .form .regulation-description {
+  width: 60vw;
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: 300;
+  color: #dedede;
+}
+.wrapper .form-wrapper .form .regulation-description a {
+  color: #fff;
+}
 .wrapper .form-wrapper .field {
   display: flex;
   flex-direction: column;
