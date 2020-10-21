@@ -391,7 +391,6 @@ body .wrapper .game-wrapper div.hidden {
     background-size: contain;
     flex-basis: 20%;
     height: 12vh;
-    transition: all 0.2s;
   }
 }
 /* Mobile max-width 330px */
