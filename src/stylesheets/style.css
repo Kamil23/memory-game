@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
   color: #fff;
-  background: #23345c;
+  background: url(../assets/spiral_green.jpg) no-repeat center;
 }
 body .wrapper {
   margin-bottom: 68px;
@@ -30,7 +30,6 @@ body .wrapper .no-display {
 }
 body .wrapper .bottom-nav {
   width: 100%;
-  background-color: #23345c;
   display: flex;
   position: fixed;
   bottom: -1px;
@@ -95,9 +94,9 @@ body .wrapper .init-info .main-btn {
   margin-top: 35px;
   padding: 0 20px;
   height: 80px;
-  background: #de9d13;
+  background: #ffd700;
   border: none;
-  color: #fff;
+  color: #404040;
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
@@ -190,7 +189,6 @@ body .wrapper .game-wrapper div.hidden {
   background: url(../assets/dnl-logo.png) no-repeat center;
   background-size: 60px 60px;
   background-color: rgba(210, 44, 88, 0.75);
-  box-shadow: 0 1px 1px #ccc;
 }
 
 /* Summary page */
@@ -275,10 +273,10 @@ body .wrapper .game-wrapper div.hidden {
   margin-top: 10px;
   width: 60vw;
   height: 57px;
-  background: #de9d13;
+  background: #ffd700;
   border: none;
   border-radius: 6px;
-  color: #fff;
+  color: #404040;
   font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;

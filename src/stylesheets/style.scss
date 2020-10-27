@@ -16,7 +16,7 @@ $color-4: #1d1d1d;
 $color-5: #343434;
 $color-6: #23345c;
 
-$btnBackground: #de9d13;
+$btnBackground: #ffd700;
 $borderInputColor: #707070;
 $errorColor: #e72c2c; 
 
@@ -42,7 +42,7 @@ body {
   min-height: 100vh;
   font-family: $font-family;
   color: $color-1;
-  background: $color-6;
+  background: url(../assets/spiral_green.jpg) no-repeat center;
   .wrapper {
     margin-bottom: 68px;
     display: flex;
@@ -53,7 +53,7 @@ body {
     }
     .bottom-nav {
       width: 100%;
-      background-color: $color-6;
+      // background-color: $color-6;
       display: flex;
       position: fixed;
       bottom: -1px;
@@ -119,7 +119,7 @@ body {
         height: 80px;
         background: $btnBackground;
         border: none;
-        color: $color-1;
+        color: $color-3;
         font-size: 24px;
         font-weight: $font-bold;
         text-transform: uppercase;
@@ -213,7 +213,6 @@ body {
           background: url(../assets/dnl-logo.png) no-repeat center;
           background-size: 60px 60px;
           background-color: $tilesHiddenBg;
-          box-shadow: 0 1px 1px #ccc;
         }
       }
     }
@@ -304,7 +303,7 @@ body {
       background: $btnBackground;
       border: none;
       border-radius: 6px;
-      color: $color-1;
+      color: $color-3;
       font-size: 21px;
       font-weight: $font-bold;
       text-transform: uppercase;
